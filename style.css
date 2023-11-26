@@ -8,17 +8,15 @@
     src: url(./font/Lato-Regular.ttf);    
 }
 
-
-
-/* img{
-    max-width: 100%;
-} */
-
+body{
+    font-family: "Lato";
+}
 
 .center{
     padding-left: calc(50% - 800px);
     padding-right: calc(50% - 800px);
 }
+
 
 .header{
     display: flex;
@@ -34,11 +32,16 @@
 
 
 .top_content{
+    
     background-color: #F1E4E6;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 16px;    
 
+}
+
+.img_top{
+    max-width: 50%;
 }
 
 .top_stick{
@@ -48,8 +51,12 @@
 
 
 .h1_top{
-    width: 395px;
-    height: 93px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    max-width: 395px;
+    height: auto;
     font-size: 48px;
     font-style: normal;
     font-weight: 900;
@@ -64,26 +71,29 @@
 }
 
 .fashion{
-    color: #F16D7F;
-    font-family: Lato;
+    color: #F16D7F;    
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
-.icons_menu_top{
+
+
+.icons_menu_top{     
+    max-width: 1200px;    
+    padding-left: 10%;
+    padding-right: 10%; 
+    padding-top: 65px;   
     display: grid;
-    grid-template-columns: repeat(3, 360px);
-    /* grid-template-rows: 290px; */
-    gap: 40px;
-    justify-content: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-gap: 3em;      
+    justify-items: center;
+    margin: 50px auto 50px auto;
 }
 
-.icons_menu{
-    position: relative;
+.icons_menu{    
+    position: relative;    
 }
 
 .icons_menu_content{
@@ -94,17 +104,25 @@
     left: 35%;      
 }
 
-.icons_menu_content_long{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 45%;
-    left: 550px;      
+.icons_menu_long{
+    position: relative;
+    grid-column: 1 / -1;
 }
 
+.icons_menu_content_long{
+    position: absolute;
+    width: auto;
+    height: 100%;
+    top: 45%;
+    left: 45%;          
+}
+
+.img_icons_menu{
+    max-width: 100%;    
+}   
+
 .img_accesories{
-    
-    margin-left: 7px;
+    max-width: 100%;
 }
 
 .icons_menu_text{
@@ -149,31 +167,40 @@
 
 
 
+
 .part_one_top{
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 6px;
+    margin-top: 95px;
 }
+
+
 
 .section_part_one_info{
-    display: grid;    
-    grid-template-columns: repeat(3, 360px);
+    display: grid;       
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     grid-template-rows: auto;
-    gap: 30px;
+    grid-gap:3em;
     justify-content: center;    
-    margin: 50px 230px 50px 230px;
-    
+    margin: 50px auto 50px auto; 
+    padding-left: 10%;
+    padding-right: 10%; 
 
 }
+
+
 
 .po_1, .po_2, .po_3, .po_4, .po_5, .po_6{
     background-color: #F8F8F8;
+    display: flex;
+    flex-direction: column;
 }
 
 .h2_part_one{
-    color: #222;
-    font-family: Lato;
+    color: #222;    
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
@@ -181,8 +208,7 @@
 }
 
 .p_part_one_top{
-    color: #9F9F9F;
-    font-family: Lato;
+    color: #9F9F9F;    
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -192,8 +218,7 @@
 
 
 .h4_part_one{
-    color: #000;
-    font-family: Lato;
+    color: #000;    
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
@@ -202,8 +227,7 @@
 }
 
 .p_part_one{
-    color: #5D5D5D;
-    font-family: Lato;
+    color: #5D5D5D;    
     font-size: 14px;
     font-style: normal;
     font-weight: 300;
@@ -212,12 +236,130 @@
 }
 
 .price_part_one{
-    color: #F16D7F;
-    font-family: Lato;
+    color: #F16D7F;    
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     padding-top: 18px;
+}
+
+
+
+
+@media (max-width:1440px) and (min-width:768px){  
+
+    .header{
+        max-width: 100%;
+        gap: 300px;
+    }
+
+
+    .top_stick{
+        padding-top: 15px;        
+    }    
+    
+    
+    .h1_top{
+        max-width: 280px;
+        height: auto;
+        font-size: 44px;
+    }
+    
+    .luxerios{
+        font-size: 24px;        
+    }
+    
+    .fashion{        
+        font-size: 24px;        
+    }
+
+
+    .icons_menu_top{     
+        max-width: 768px;   
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        grid-gap: 1em; 
+        padding: 19px; 
+        margin: 50px auto 50px auto;    
+        
+    }
+
+    .img_icons_menu{
+        max-width: 230px;        
+    }    
+
+    .icons_menu_content{
+        position: absolute;
+        width: auto;
+        height: auto;
+        top: 40%;
+        left: 20%; 
+    }
+
+    .icons_menu_content_long{
+        width: auto;
+        height: auto;
+        top: 35%;
+        left: 40%;
+    }
+
+    .icons_menu_text{    
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .h3_icons_menu{    
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;        
+    }   
+    
+    .icons_menu_content_long{
+        position: absolute;
+        width: auto;
+        height: auto;
+        top: 35%;
+        left: 40%;          
+    }
+
+
+
+
+    .section_part_one_info{       
+        gap: 16px;       
+        margin: 50px 10px 50px 10px;
+    } 
+
+
+    
+    
+    .section_part_one_info{        
+        grid-gap:10px;        
+        justify-content: center;    
+        margin: 70px auto 70px auto; 
+        padding-left: 16px;
+        padding-right: 16px; 
+    
+    }
+
+    .img_part_one{
+        max-width: 360px;
+        max-height: auto;
+    }    
+    
+    .po_1, .po_2, .po_3, .po_4, .po_5, .po_6{
+        background-color: #F8F8F8;
+        display: flex;
+        flex-direction: column;
+        
+    }       
+    
+    
+   
+    
+
 }
 
