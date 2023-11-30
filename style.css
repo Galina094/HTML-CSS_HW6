@@ -29,6 +29,10 @@ body{
     gap: 500px;
 }
 
+.button_of_header{
+    display: none;
+}
+
 
 
 .top_content{
@@ -40,7 +44,7 @@ body{
 
 }
 
-.img_top{
+.img_top{    
     max-width: 50%;
 }
 
@@ -81,7 +85,8 @@ body{
 
 
 .icons_menu_top{     
-    max-width: 1200px;    
+    max-width: 1200px;   
+    min-width: 360px; 
     padding-left: 10%;
     padding-right: 10%; 
     padding-top: 65px;   
@@ -123,6 +128,10 @@ body{
 
 .img_accesories{
     max-width: 100%;
+}
+
+.img_accesories375{
+    display: none;
 }
 
 .icons_menu_text{
@@ -355,11 +364,137 @@ body{
         display: flex;
         flex-direction: column;
         
-    }       
-    
-    
-   
-    
+    }        
 
 }
+
+
+
+
+
+@media (max-width:767px) and (min-width:375px){
+
+    .center{
+        padding-left: calc(50% - 187px);
+        padding-right: calc(50% - 187px);
+    }
+
+
+    .header{       
+        gap: 125px;
+    }
+
+
+    .buttons_of_header{
+        display: none;
+    }
+
+    .button_of_header{
+        display: flex;
+    }
+
+    .top_content{        
+        height: 370px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .img_top{ 
+        display: none;       
+    }
+
+    
+
+    .top_stick{
+        padding-top: 15px;        
+    }    
+    
+    
+    .h1_top{
+        max-width: 280px;
+        height: auto;
+        font-size: 38px;
+    }
+    
+    .luxerios{
+        font-size: 20px;        
+    }
+    
+    .fashion{        
+        font-size: 20px;        
+    }  
+
+
+    .img_icons_menu{
+
+        max-width: 360px;
+        min-width: 343px;
+        height: 247px;
+    }
+
+    .icons_menu_content{ 
+        position: absolute;  
+        width: auto;   
+        height: auto;  
+        /* top: 35%;
+        left: 35%;       */
+
+        
+    }
+
+    
+
+
+
+    
+
+    
+
+    .img_accesories{
+        display: none;
+    }
+
+
+
+    .icons_menu_text_accesories{
+        display: none; 
+     
+    }
+
+    .icons_menu_content_long{
+        display: none;
+    }
+
+
+   
+    
+    
+
+
+    .img_accesories375{    
+        display: flex;
+        max-width: 360px;
+        min-width: 343.262px;
+        height: 111px;
+    }
+
+    .icons_menu_text_women{
+        margin: 0;
+    
+    }
+
+    .icons_menu_text{
+    
+        margin-left: 0px; 
+        margin-top: 10px;
+    
+    }   
+    
+    .po_1, .po_2, .po_3, .po_4, .po_5, .po_6{        
+        padding: 15px;       
+    } 
+
+}
+
+    
 
